@@ -56,6 +56,9 @@ function setContents(event, notificationObj) {
   }
 
   let notiDoc = global.window.document
+  // Sender
+  let senderDoc = notiDoc.getElementById('sender')
+  senderDoc.innerHTML = notificationObj.sender || ''
   // Title
   let titleDoc = notiDoc.getElementById('title')
   titleDoc.innerHTML = notificationObj.title || ''
